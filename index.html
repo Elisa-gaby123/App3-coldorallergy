@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Elisa Munoz								
+Elisa Munoz	   <!-- added my name-->							
 													
  
 Further Information:
@@ -48,8 +48,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 	function calculateResults() {
-		var allergyPercent = (allergy_count / 6) * 100;  
-		var coldPercent = (cold_count / 6) * 100;        
+		var allergyPercent = (allergy_count / 6) * 100;  <!-- divided by 6 to account for the 6 questions-->
+		var coldPercent = (cold_count / 6) * 100;        <!-- divided by 6 to account for the 6 questions-->
 
 		var resultText = document.getElementById("results");
 		
@@ -150,8 +150,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat?</p>
-		<a href="#four" onclick="coldAdd()" class="w3-btn w3-black w3-round">Yes</a>
-		<a href="#four" onclick="allergyAdd()" class="w3-btn w3-black w3-round">No</a>
+		<a href="#four" onclick="coldAdd()" class="w3-btn w3-black w3-round">Yes</a>     <!-- added yes or no buttons and cold function-->
+		<a href="#four" onclick="allergyAdd()" class="w3-btn w3-black w3-round">No</a>    <!-- added yes or no buttons and allergy function-->
 	<footer class="w3-bottom w3-container w3-flat-carrot">
 		<p>DIY!</p>
 	</footer>
@@ -167,8 +167,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic</p>
-		<a href="#five" onclick="allergyAdd()" class="w3-btn w3-black w3-round">Yes</a>
-		<a href="#five" onclick="coldAdd()" class="w3-btn w3-black w3-round">No</a>
+		<a href="#five" onclick="allergyAdd()" class="w3-btn w3-black w3-round">Yes</a>		<!-- added yes or no buttons and allergy function-->
+		<a href="#five" onclick="coldAdd()" class="w3-btn w3-black w3-round">No</a>        <!-- added yes or no buttons and cold function-->
 	<footer class="w3-bottom w3-container w3-flat-carrot">
 		<p>DIY!</p>
 	</footer>
@@ -184,8 +184,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<div id="content" class="w3-container">
 		<p>Have your symptoms lasted for longer than one week?</p>
-		<a href="#six" onclick="allergyAdd()" class="w3-btn w3-black w3-round">Yes</a>
-		<a href="#six" onclick="coldAdd()" class="w3-btn w3-black w3-round">No</a>
+		<a href="#six" onclick="allergyAdd()" class="w3-btn w3-black w3-round">Yes</a>     <!-- added yes or no buttons and allergy function-->
+		<a href="#six" onclick="coldAdd()" class="w3-btn w3-black w3-round">No</a>         <!-- added yes or no buttons and cold function-->
 	<footer class="w3-bottom w3-container w3-flat-carrot">
 		<p>DIY!</p>
 	</footer>
@@ -199,8 +199,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		</header>
 	<div class="w3-container">
 		<p>Have you experienced body aches?</p>
-		<a href="#resultsPage" onclick="coldAdd(); calculateResults();" class="w3-btn w3-black w3-round">Yes</a>
-		<a href="#resultsPage" onclick="allergyAdd(); calculateResults();" class="w3-btn w3-black w3-round">No</a>
+		<a href="#resultsPage" onclick="coldAdd(); calculateResults();" class="w3-btn w3-black w3-round">Yes</a>      <!-- added yes or no buttons and allergy function-->
+		<a href="#resultsPage" onclick="allergyAdd(); calculateResults();" class="w3-btn w3-black w3-round">No</a>    <!-- added yes or no buttons and cold function-->
 	<footer class="w3-bottom w3-container w3-flat-carrot">
 		<p>DIY!</p>
 	</footer>
@@ -232,6 +232,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <footer class="w3-bottom w3-container w3-flat-carrot" style="z-index: 10;">
 	<p>DIY!</p>
 </footer>
-
+<!-- end of page-->
+<!-- result button was working initially but then it skipped straight to results-->
 </body>
 </html>
