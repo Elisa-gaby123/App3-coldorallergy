@@ -32,8 +32,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
-   </head> 
-
 
 <script>
         var allergy_count = 0;
@@ -42,20 +40,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		alert(allergy_count);
 
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-	function showResults(){
-		if(allergy_count > cold_count){
-			document.getElementById("results").innerHTML = "You may have allergies.";
-		} else {
-			document.getElementById("results").innerHTML = "You may have a cold.";
-		}
-	}
+	function calculateResults() {
+		var allergyPercent = (allergy_count / 4) * 100;
+		var coldPercent = (cold_count / 4) * 100;
+
+		var resultText = document.getElementById("results");
+		
+	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+
 
   </script>
 
