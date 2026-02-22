@@ -7,7 +7,8 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Elisa Munoz
+Elisa Munoz								<!--added my name-->
+													
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -20,7 +21,7 @@ Brief Description of Goal of Code:
 This app asks the user four questions to determine if they have a cold or allergy based on four questions. Based on the answers, a result is displayed showing the probability of it being allergies or a cold.
  
 Known Issues:
-The app's calculation is based solely on four questions, 
+The app's calculation is based solely on four questions, information does not reset on its own.
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -47,13 +48,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 	function calculateResults() {
-		var allergyPercent = (allergy_count / 6) * 100;
-		var coldPercent = (cold_count / 6) * 100;
+		var allergyPercent = (allergy_count / 6) * 100;  <!--divided by number of questions>
+		var coldPercent = (cold_count / 6) * 100;        <!--divided by number of questions>
 
 		var resultText = document.getElementById("results");
 		
-	resultText.innerHTML = "Probability it is allergies =" + allergyPercent.toFixed(0) + "%" + 
-					       "<br> Probability it is a cold =" + coldPercent.toFixed(0) + "%";
+	resultText.innerHTML = "Probability it is allergies =" + allergyPercent.toFixed(0) + "%" + 		<!--included formulas-->
+					       "<br> Probability it is a cold =" + coldPercent.toFixed(0) + "%";        <!--included formulas-->
 	}
 
 
@@ -84,6 +85,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 <body>
+
+															<!--Begining of Website-->
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Cold or Allergies?</h1>
 </div> 
@@ -91,7 +94,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div id="content" class="w3-container">
 	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
 	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>      <!--Get started button-->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -101,23 +104,28 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>DIY!</p>
 	</footer>
 </div> 
+
+																	<!--added footer-->
+																	<!--first page begins-->
 	
 	
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1>
+		<h1>Question 1</h1>								<!--added first question-->
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?.</p>  
-			<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black w3-round">Yes</a>
-			<a href="#two" onclick="coldAdd();" class="w3-btn w3-black w3-round">No</a>
+        <p>Are your eyes watery or itchy?.</p>  					   		<!--First question-->
+			<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black w3-round">Yes</a> <!--added yes or no buttons and allergy function-->
+			<a href="#two" onclick="coldAdd();" class="w3-btn w3-black w3-round">No</a>     <!--added yes or no buttons and cold function-->
 
 			<footer class="w3-bottom w3-container w3-flat-carrot">
 		<p>DIY!</p>
 	</footer>
 </div> 
-
+											<!--added footer-->
+											<!--end of page 1-->
+											<!--second page begins-->
 
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
@@ -125,14 +133,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p>
-		<a href="#three" onclick="coldAdd()" class="w3-btn w3-black w3-round">Yes</a>
-		<a href="#three" onclick="allergyAdd()" class="w3-btn w3-black w3-round">No</a>
+		<p>Do you have a fever?</p>											<!--added question two-->
+		<a href="#three" onclick="coldAdd()" class="w3-btn w3-black w3-round">Yes</a>    <!--added yes or no buttons and cold function-->
+		<a href="#three" onclick="allergyAdd()" class="w3-btn w3-black w3-round">No</a>  <!--added yes or no buttons and allergy function-->
 	<footer class="w3-bottom w3-container w3-flat-carrot">
 		<p>DIY!</p>
 	</footer>
 </div>
-
+														<!--added footer-->
+														<!--end of page 2-->
+														<!--third age begins-->
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
 		</h1>Question 3<h1>
@@ -146,7 +156,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>DIY!</p>
 	</footer>
 </div> 
-
+													<!--added footer-->
+													<!--end of page 3-->
+													<!--fourth page begins-->
 
 <div class="page" id="four">
 	<div class="w3-container w3-flat-carrot">
@@ -162,6 +174,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</footer>
 </div> 
 
+											 		<!--added footer-->
+													<!--end of page 4-->
+													<!--fifth page begins-->
 	<div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 5</h1>
@@ -175,7 +190,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>DIY!</p>
 	</footer>
 </div> 
-		
+													<!--added footer-->
+													<!--end of page 5-->
+													<!--sixth page begins-->
 	<div class="page" id="six">
 		<header class="w3-container w3-flat-carrot">
 			<h1>Question 6</h1>
@@ -188,7 +205,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>DIY!</p>
 	</footer>
 </div> 
-
+													<!--added footer-->
+													<!--end of page 6-->
+													<!--results page begins-->
 		
  <div class="page" id="seven">
  <div class="w3-container w3-flat-carrot">
@@ -209,7 +228,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</footer>
 </div>
 
-
+													<!--added footer-->
+													<!--end of page 7-->
 <footer class="w3-bottom w3-container w3-flat-carrot" style="z-index: 10;">
 	<p>DIY!</p>
 </footer>
