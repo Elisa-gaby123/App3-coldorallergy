@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 This app asks the user four questions to determine if they have a cold or allergy based on four questions. Based on the answers, a result is displayed showing the probability of it being allergies or a cold.
  
 Known Issues:
-The app should not be used to diagnose illnesses.
+The app's calculation is based solely on four questions, 
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -152,7 +152,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 
 	<div id="content" class="w3-container">
-		<p id="results"></p>
+		<p resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;</p>
+		<var resultText = document.getElementById("results");>
+			
 	</div>
 </div>
 
